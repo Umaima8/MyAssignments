@@ -1,0 +1,12 @@
+var num1 = 6;
+var num2 = 2;
+console.log("the addition is = ", num1 + num2);
+var num3 = 10;
+var num4 = 2;
+console.log("the subraction is = ", num3 - num4);
+var num5 = 4;
+var num6 = 2;
+console.log("the multiplication is = ", num5 * num6);
+var num7 = 16;
+var num8 = 2;
+console.log("the division is = ", num7 / num8);
