@@ -1,22 +1,25 @@
-let current_users: string[] = ["Umaima","Tayyaba12","Iqra123","Aqsa1234","Hania321"]
 
-let new_users: string[] = ["Hassan","Tayyaba12","Iqra123","Umer8","Burhan00"]
-
-
-let lowerCase_currentUsers = current_users.map(users => users.toLowerCase())
+const currentUsers: string[] = ["Umaima00", "Tyyaba345", "aqsa1","Hania","Alishba"  ];
 
 
+const newUsers: string[] = ["aqsa1", "umaima00", "Iqra8", "Hassan00","Hania","ALI7"];
 
-for (let i = 0; i < new_users.length; i++) {
 
-    let lowerCase_newUsers = new_users[i].toLowerCase()
-    
-    
-    if (new_users === current_users) {
-        console.log("Sorry already in use. Try a new user name")
+// Convert current usernames to lowercase for case-insensitive comparison
+const currentUsersLower: string[] = currentUsers.map(user => user.toLowerCase());
+
+// Check if each new username is already used
+for (const newUser of newUsers) {
+    let isUsernameAvailable = true;
+    for (const currentUser of currentUsersLower) {
+        if (newUser.toLowerCase() === currentUser) {
+            isUsernameAvailable = false;
+            break;
+        }
     }
-
-    else {
-        console.log("this username is available")
+    if (isUsernameAvailable) {
+        console.log(`Username '${newUser}' is available.`);
+    } else {
+        console.log(`Username '${newUser}' is not available. Please enter a new username.`);
     }
 }
